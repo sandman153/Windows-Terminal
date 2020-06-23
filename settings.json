@@ -72,12 +72,6 @@
             "hidden": false,
             "name": "Azure Cloud Shell",
             "source": "Windows.Terminal.Azure"
-        },
-        {
-            "guid": "{a3a2e83a-884a-5379-baa8-16f193a13b21}",
-            "hidden": false,
-            "name": "PowerShell 7 Preview",
-            "source": "Windows.Terminal.PowershellCore"
         }
     ],
     // Add custom color schemes to this array.
@@ -165,7 +159,7 @@
                 "brightCyan": "#59d599",
                 "brightWhite": "#fff1e9",
                 "background": "#22211d",
-                "foreground": "#807a74" 485914
+                "foreground": "#807a74"
               },
               {
                 "name": "Breeze",
