@@ -8,7 +8,7 @@ if ($host.Name -eq 'ConsoleHost')
 #Import-Module PSColors
 #Import-Module posh-git
 Import-Module -Name Terminal-Icons
-Import-Module oh-my-posh
+#Import-Module oh-my-posh
 set-alias desktop "Desktop.ps1"
 #Set-Theme ParadoxGlucose
 #Set-PoshPrompt -theme "D:\Dropbox\poshv3.json"
