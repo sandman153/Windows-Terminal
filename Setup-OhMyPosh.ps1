@@ -20,7 +20,7 @@ function Write-Log {
 if ($DebugMode) { Write-Log "Debug Mode Enabled" "DEBUG" }
 
 # Define profile paths for multi-device setup (Local Only, No OneDrive Sync)
-$gitProfilePath = "E:\Development\Windows-Terminal\PowerShell_profile.ps1"
+#$gitProfilePath = "E:\Development\Windows-Terminal\PowerShell_profile.ps1"
 $localProfilePath = "E:\Development\Windows-Terminal\PowerShell_profile.ps1"
 $destinationProfile = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 $oneDriveProfile = "F:\OneDrive - Personal\OneDrive\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
@@ -87,6 +87,13 @@ if ($existingProfileContent -notmatch "oh-my-posh --init") {
 # Auto-load Oh My Posh theme on every terminal launch
 if (Test-Path "E:\Development\Windows-Terminal\20211104-sarath-terminal.json") {
     oh-my-posh --init --shell pwsh --config "E:\Development\Windows-Terminal\20211104-sarath-terminal.json" | Invoke-Expression
+    # Install Windows-Terminal
+    Import-Module -Name Terminal-Icons
+    # Predictive Typing
+    Import-Module PSReadLine
+    Set-PSReadLineOption -PredictionSource History
+    Set-PSReadLineOption -PredictionViewStyle ListView
+    Set-PSReadLineOption -EditMode Windows
 } else {
     Write-Log "Theme file not found. Skipping theme application." "WARN"
 }
